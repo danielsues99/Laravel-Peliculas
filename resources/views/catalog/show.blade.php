@@ -31,10 +31,11 @@
              @if ($pelicula['rented'])
                 <a class='btn btn-danger'>Devolver película</a>
             @else
-                <a class='btn btn-success'>Alquilar película</a>
-                {{ $pelicula['rented'] }}   
+                <a class='btn btn-success'>Alquilar película</a>   
             @endif
-             <a href="{{url('/catalog/edit/'.$pelicula['id'])}}" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span> Editar pelicula</a>
+             <a href="{{url('/catalog/edit/'.$pelicula['id'])}}" class="btn btn-warning">
+             <span class="glyphicon glyphicon-pencil"></span> Editar pelicula
+             </a>
              <a >
                 <button type="button" class="btn btn-default">
                     <span class="glyphicon glyphicon-chevron-left"></span> Volver al listado

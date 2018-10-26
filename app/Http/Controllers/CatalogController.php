@@ -22,17 +22,13 @@ class CatalogController extends Controller
 	}
 
 	public function getCreate(){
-
 		return view('catalog/create');
-
-
 	}
 
 	public function getEdit($id){
 		$pelicula = movie::findOrFail($id);
 		return view('catalog/edit')->with('pelicula',$pelicula);
 	}
-
 
 }
 
