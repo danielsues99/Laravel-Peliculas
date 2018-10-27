@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 
 use App\movie;
+use App\User;
 
 
 
@@ -181,7 +182,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-        self::seedCatalog();
+		self::seedCatalog();
+		self::seedUsers();
             
     }
 
@@ -198,5 +200,14 @@ class DatabaseSeeder extends Seeder
         $p->synopsis	=	$pelicula['synopsis'];
         $p->save();
          }
-    }
+	}
+	public function seedUsers()
+	{
+		$user = new User;
+		$user::truncate();
+		$user->name = ('javier ortegon');
+		$user->email = ('javierortegon@ggg.com');
+		$user->password = bcrypt('password');
+		$user->save();
+	}
 }
