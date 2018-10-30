@@ -31,7 +31,17 @@ Route::get('catalog/create', [
 Route::get('catalog/edit/{id}', [
     'middleware' => 'auth',
     'uses' => 'CatalogController@getEdit'
-]); 
+]);
+
+Route::post('catalog/create', [
+    'middleware' => 'auth',
+    'uses' => 'CatalogController@postCreate'
+]);
+
+Route::put('catalog/edit/{id}', [
+    'middleware' => 'auth',
+    'uses' => 'CatalogController@putEdit'
+]);
 
 Auth::routes();
 

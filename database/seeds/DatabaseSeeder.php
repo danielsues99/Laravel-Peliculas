@@ -205,8 +205,8 @@ class DatabaseSeeder extends Seeder
 	{
 		$user = new User;
 		$user::truncate();
-		$user->name = ('javier ortegon');
-		$user->email = ('javierortegon@ggg.com');
+		$user->name = ('daniel suescun');
+		$user->email = ('dansues@ggg.com');
 		$user->password = bcrypt('password');
 		$user->save();
 	}
