@@ -307,6 +307,13 @@ class ComposerStaticInita63a67fb59b8c887714a7ebe2eb56b67
                 0 => __DIR__ . '/..' . '/mockery/mockery/library',
             ),
         ),
+        'K' => 
+        array (
+            'Krucas\\Notification' => 
+            array (
+                0 => __DIR__ . '/..' . '/edvinaskrucas/notification/src',
+            ),
+        ),
         'D' => 
         array (
             'Doctrine\\Common\\Lexer\\' => 
@@ -1751,6 +1758,14 @@ class ComposerStaticInita63a67fb59b8c887714a7ebe2eb56b67
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/Highlighter.php',
         'JsonSerializable' => __DIR__ . '/..' . '/nesbot/carbon/src/JsonSerializable.php',
+        'Krucas\\Notification\\Collection' => __DIR__ . '/..' . '/edvinaskrucas/notification/src/Krucas/Notification/Collection.php',
+        'Krucas\\Notification\\Facades\\Notification' => __DIR__ . '/..' . '/edvinaskrucas/notification/src/Krucas/Notification/Facades/Notification.php',
+        'Krucas\\Notification\\Message' => __DIR__ . '/..' . '/edvinaskrucas/notification/src/Krucas/Notification/Message.php',
+        'Krucas\\Notification\\Middleware\\NotificationMiddleware' => __DIR__ . '/..' . '/edvinaskrucas/notification/src/Krucas/Notification/Middleware/NotificationMiddleware.php',
+        'Krucas\\Notification\\Notification' => __DIR__ . '/..' . '/edvinaskrucas/notification/src/Krucas/Notification/Notification.php',
+        'Krucas\\Notification\\NotificationServiceProvider' => __DIR__ . '/..' . '/edvinaskrucas/notification/src/Krucas/Notification/NotificationServiceProvider.php',
+        'Krucas\\Notification\\NotificationsBag' => __DIR__ . '/..' . '/edvinaskrucas/notification/src/Krucas/Notification/NotificationsBag.php',
+        'Krucas\\Notification\\Subscriber' => __DIR__ . '/..' . '/edvinaskrucas/notification/src/Krucas/Notification/Subscriber.php',
         'Laravel\\Tinker\\ClassAliasAutoloader' => __DIR__ . '/..' . '/laravel/tinker/src/ClassAliasAutoloader.php',
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
