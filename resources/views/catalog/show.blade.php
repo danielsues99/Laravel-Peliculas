@@ -2,47 +2,62 @@
 
 @section('content')
 
-<div class="row">
+    <div class="row">
 
-    <div class="col-sm-4">
+        <div class="col-sm-4">
 
-        {{-- TODO: Imagen de la películas --}}
-        <img src="{{$pelicula['poster']}}" class="img-responsive"/>
+            <img src="{{$pelicula['poster']}}" class="img-responsive"/>
 
-    </div>
-    <div class="col-sm-8">
-
-        {{-- TODO: Datos de la películas --}}
-        <h2>
+        </div>
+        <div class="col-sm-8">
+            <h2>
                 {{$pelicula['title']}}
             </h2>
-             <p>
+            <p>
                 <strong>Año:</strong> {{$pelicula['year']}}
             </p>
              <p>
                 <strong>Director:</strong> {{$pelicula['director']}}
             </p>
-             <p>
+            <p>
                 <strong>Resumen:</strong> {{$pelicula['synopsis']}}
             </p> 
-             <p>
+            <p>
                 <strong>Estado:</strong> {{ $pelicula['rented'] == 0 ? "Película disponible"  : "Película actualmente alquilada" }} 
             </p>
-             @if ($pelicula['rented'])
-                <a class='btn btn-danger'>Devolver película</a>
+            @if ($pelicula['rented'])
+                <form action="{{action('CatalogController@putReturn', $pelicula->id)}}" method="POST" style="display:inline">
+                    {{ method_field('PUT') }}
+                    {{ csrf_field() }}
+                    <button type="submit" class="btn btn-danger" style="display:inline">
+                        Devolver película
+                    </button>
+                </form>
             @else
-                <a class='btn btn-success'>Alquilar película</a>   
+                <form action="{{action('CatalogController@putRent', $pelicula->id)}}" method="POST" style="display:inline">
+                    {{ method_field('PUT') }}
+                    {{ csrf_field() }}
+                    <button type="submit" style="display:inline" class='btn btn-success'>
+                        Alquilar película
+                    </button>
+                </form>
             @endif
-             <a href="{{url('/catalog/edit/'.$pelicula['id'])}}" class="btn btn-warning">
-             <span class="glyphicon glyphicon-pencil"></span> Editar pelicula
-             </a>
-             <a >
+
+            <a class="btn btn-warning" href="{{ url('/catalog/edit/' . $pelicula['id'] ) }}"><span class="glyphicon glyphicon-pencil"></span> Editar pelicula</a>
+
+            <form action="{{action('CatalogController@deleteMovie', $pelicula->id)}}" method="POST" style="display:inline">
+                {{ method_field('delete') }}
+                {{ csrf_field() }}
+                <button class='btn btn-danger'>
+                    Eliminar película
+                </button>
+            </form>
+            <a >
                 <button type="button" class="btn btn-default">
                     <span class="glyphicon glyphicon-chevron-left"></span> Volver al listado
                 </button>
             </a>    
-
+        </div>
     </div>
-</div>
+
 @stop
- 

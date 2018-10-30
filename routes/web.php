@@ -43,6 +43,20 @@ Route::put('catalog/edit/{id}', [
     'uses' => 'CatalogController@putEdit'
 ]);
 
+Route::put('/catalog/rent/{id}', [
+    'middleware' => 'auth',
+    'uses' => 'CatalogController@putRent'
+]);
+Route::put('catalog/return/id/{id}', [
+    'middleware' => 'auth',
+    'uses' => 'CatalogController@putReturn'
+]); 
+Route::delete('/catalog/delete/{id}', [
+    'middleware' => 'auth',
+    'uses' => 'CatalogController@deleteMovie'
+]);
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
