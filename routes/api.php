@@ -18,8 +18,6 @@ Route::get('/v1/catalog','APICatalogController@index');
 
 Route::get('/v1/catalog/{id}','APICatalogController@show');
 
-Route::get('baaa/{id}', 'APICatalogController@show');
-
 Route::post('v1/catalog', function () {
 })->middleware('auth.basic');
 

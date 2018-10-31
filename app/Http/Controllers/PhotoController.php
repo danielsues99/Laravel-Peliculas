@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\movie;
+
 use Illuminate\Http\Request;
 
-class APICatalogController extends Controller
+class PhotoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,15 +13,7 @@ class APICatalogController extends Controller
      */
     public function index()
     {
-        return response()->json( movie::all() );
-    }
-
-    public function putRent($id) {
-        $m = Movie::findOrFail( $id );
-        $m->rented = true;
-        $m->save();
-        return response()->json( ['error' => false,
-                              'msg' => 'La película se ha marcado como alquilada' ] );
+        //
     }
 
     /**
@@ -53,8 +45,7 @@ class APICatalogController extends Controller
      */
     public function show($id)
     {
-        $movie = Movie::findOrFail( $id );
-        return response()->json( $movie );
+        //
     }
 
     /**

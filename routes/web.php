@@ -56,6 +56,7 @@ Route::delete('/catalog/delete/{id}', [
     'uses' => 'CatalogController@deleteMovie'
 ]);
 
+Route::resource('photo', 'PhotoController');
 
 Auth::routes();
 

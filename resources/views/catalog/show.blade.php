@@ -52,7 +52,7 @@
                     Eliminar película
                 </button>
             </form>
-            <a >
+            <a href="{{ url('catalog') }}">
                 <button type="button" class="btn btn-default">
                     <span class="glyphicon glyphicon-chevron-left"></span> Volver al listado
                 </button>
