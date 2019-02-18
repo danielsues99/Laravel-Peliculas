@@ -53,7 +53,7 @@ class CatalogController extends Controller
         $movie->synopsis = $request->synopsis;
         $movie->save();
         $notificacion = new Notification;
-        $notificacion::success('La película se modifico correctamente');
+        $notificacion::success('La película se modificó correctamente');
         return redirect('/catalog/show/'.$id);
     }
 
@@ -62,7 +62,7 @@ class CatalogController extends Controller
         $movie->rented = true;
         $movie->save();
         $notificacion = new Notification;
-        $notificacion::info('La película se rento correctamente');
+        $notificacion::info('La película se rentó correctamente');
         return redirect('/catalog/show/'.$id);
     }
 
@@ -71,7 +71,7 @@ class CatalogController extends Controller
         $movie->rented = false;
         $movie->save();
         $notificacion = new Notification;
-        $notificacion::success('La película se entrego correctamente');
+        $notificacion::success('La película se entregó correctamente');
         return redirect('/catalog/show/'.$id);
     } 
     public function deleteMovie($id, Request $request){

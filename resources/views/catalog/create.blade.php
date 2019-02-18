@@ -3,7 +3,6 @@
 @section('content')
 
 
-         Crear pelicula
     <div class="row" style="margin-top:20px">
  	<div class="col-md-offset-3 col-md-6">
  		<div class="panel panel-default">
